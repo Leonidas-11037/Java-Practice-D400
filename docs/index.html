@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+    <head>
+        <!-- What's in the <head> element is a "meta" area not for display. 
+            It holds important information about the website's contents.
+            The text inside the <title> element does show in the top tab of a web browser. 
+             The <head> is where we will include info about styling the site, too. -->
+        <title>Reflection</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- Here is a place where we can add a little styling code called CSS to this page. -->
+        
+        <script type="text/javascript" src="second-js.js">/**/</script>
+        <link rel="stylesheet" type="text/css" href="style.css" />
+        <style>
+                           :root{
+                -yellow: #FF0;
+                --aqua: #00CFFF;
+                --blue: #00F;
+               --pink: #ffc0cb;
+               --purple: #800080;
+               --teal: #5adbab;
+               --transparent: #5adbab00;
+               --lime: #0dff00;
+               --black: #000000;
+               }
+                           #yellowCircle{
+             fill:var(--yellow)
+            }
+
+            #redRect{
+             stroke:var(--aqua);
+             fill:var(--transparent);
+            }
+
+            #limed{
+             stroke:var(--lime);
+            fill: var(--transparent);
+            transition: all 1s ease;
+            }
+
+             #swerved{
+                 fill:none;
+                stroke:var(--black);
+                transition: all 2s ease;
+            }
+
+
+            #blueCircle{
+            fill:var(--blue);
+            transition: all 7s ease;
+            }
+
+            #purpleCircle{
+               fill:var(--purple)
+            }
+            svg:hover #limed{
+                transform:translate(-10%, -10%);
+                fill:var(--teal);
+                stroke:var(--pink);
+            }
+            svg:hover #swerved{
+                transform-origin:center;
+                transform:translate(20%, 30%);
+                transform:rotate(-1800deg);
+            }
+            svg:hover #blueCircle{
+                transform-origin:center;
+                transform:scale(140%);
+            }
+        </style>
+    </head>
+    <body>
+        <nav class="top">
+
+        </nav>
+        <!-- CONTENT FOR DISPLAY. The <body> element holds the content we see in the display window on the web browser.-->
+        <h1>SVG Practice</h1>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewbox="-100 0 750 750" fill="none">
+            <desc></desc>
+            <g alignment-baseline="baseline"></g>
+            
+            <circle id="blueCircle" cx="190" cy="210" r="100"/> 
+            <rect id="Redrect" height="100" width="200" x="100" stroke="white" fill="red" stroke-width="4">
+                
+                <animate attributeName="width" values="200;400;200" dur="4s" repeatCount="indefinite"></animate>
+                
+                <animate attributeName="y" dur="4s" repeatCount="indefinite" from="0" to="200"></animate>
+            </rect>
+            <ellipse id="limed" cx="170" cy="158" rx="40" ry="60" stroke-width="3" fill="transparent"/>
+            <path id="swerved" d="M10,63 Q40,85 60,60 T105,63" stroke-width="5"/>
+
+        </svg>
+
+
+        </body>
+</html>
